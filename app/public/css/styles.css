@@ -5555,9 +5555,3 @@ th.hide-for-touch {
     display: table-cell !important; }
   th.show-for-print {
     display: table-cell !important; } }
-
-body {
-  background-color: white; }
-
-.columns {
-  border: 1px solid red; }

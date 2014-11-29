@@ -9,35 +9,113 @@
 </head>
 <body>
 
+<!-- Nav Bar -->
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#">My Site</a></h1>
+        <h1><a href="#">Flappy App</a></h1>
       </li>
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
+      <div class="logo"></div>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul><!-- ends .title-area -->
 
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li class="active"><a href="#">Right Button Active</a></li>
-        <li class="has-dropdown">
-          <a href="#">Right Button Dropdown</a>
-          <ul class="dropdown">
-            <li><a href="#">First link in dropdown</a></li>
-            <li class="active"><a href="#">Active link in dropdown</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <!-- Left Nav Section -->
-      <ul class="left">
-        <li><a href="#">Left Nav Button</a></li>
-      </ul>
-    </section>
+        <li><a href="">About</a></li>
+        <li><a href="#">Specs</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul><!-- ends .right -->
   </nav>
   
+  <div id="game_overview">
+    <div class="row">
+
+      <div class="small-12 large-8 columns">
+        <div id="banner_image"></div>
+      </div><!-- ends .columns -->
+
+      <div class=" small-12 large-4 columns">
+        <div id="features">
+          <ul>
+            <li id="featurelist_header" class = "feature_list">Features</li>
+            <li class="feature_list">
+              <a href="#"><span class="highlight">23</span> Different Modes</a>
+            </li>
+            <li class="feature_list">
+              <a href="#"><span class="highlight">500</span> Options</a>
+            </li>
+            <li class="feature_list">
+              <a href="#">Over <span class="highlight">9000</span> points</a>
+            </li>
+            <li class="feature_list">
+              <a href="#"><span class="highlight">2x</span> The flappiness of v1</a>
+            </li>
+          </ul>
+        </div><!-- ends #features -->
+      </div><!-- ends .column -->
+
+    </div><!-- ends .row -->
+  </div><!-- ends #game_overview -->
+
+  <div id="description">
+    <div class="row">
+      <div class="small-12 columns">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla purus quis eros euismod sodales. Nullam sed justo quis augue imperdiet pulnivar nec nec dolor. Pellentesque tempor scelerisque accumsan.</p>
+      </div><!-- end .columns -->
+    </div><!-- end .row -->
+  </div><!-- end #description -->
+
+
+  <div id="footer">
+    <div class="row">
+      <div class="small-6 medium-4 columns">
+        <div class="footer_links" id="about">
+          <ul>
+            <li><a href="">About</a></li>
+            <li><a href="#">Specs</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        </div><!-- end #about -->
+      </div><!-- end .columns -->
+
+      <div class="hide-for-small-only medium-4 columns">
+        <div class="footer_links" id="commercial">
+          <ul>
+            <li><a href="">Commercial Licenses</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Developer Tools</a></li>
+            <li><a href="#">Documentation</a></li>
+          </ul>
+        </div><!-- end #commercial   -->
+      </div><!-- end .columns  -->
+      
+      <div class="small-6 medium-4 columns">
+        <div class="footer_links" id="tutorials">
+          <ul>
+            <li><a href="">Tutorials</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+        </div><!-- end #tutorials   -->
+      </div><!-- end .columns -->
+    </div><!-- end .row -->
+    
+    <div class="row">
+      <div class="small-12 columns">
+        <div id="copyright">
+          <span>&copy;2014 Flappy Inc.</span>
+        </div><!-- end #copyright -->
+      </div><!-- end .columns -->
+    </div><!-- end .row -->
+  </div><!-- end #footer -->
 
 
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
