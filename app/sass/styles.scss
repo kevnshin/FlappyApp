@@ -42,7 +42,16 @@ div#large_navbar{
   background-repeat: repeat-x;
   // background-size: contain;
   background-position: center 0%;
-  padding: 25px 0px 24px 0px;
+
+  @media #{$medium-only}{
+    padding: 45px 0px 30px 0px;
+  }
+
+  @media #{$large-up}{
+    padding: 25px 0px 24px 0px;
+  }
+
+  
 
   div.title{
 
@@ -58,12 +67,20 @@ div#large_navbar{
     div.logo_image{
 
       background-image: url('/images/logo.png');
-      // background-color: blue;
-      width: 114px;
-      height: 73px;
+      background-size: contain;
+      background-repeat: no-repeat;
       position: absolute;
 
+      @media #{$medium-only}{
+        width: 85px;
+        height: 50px;
+        top: -2px;
+        left: 22px;
+      }
+
       @media #{$large-up}{
+        width: 114px;
+        height: 73px;
         top: 0px;
         left: 210px;
       }
@@ -76,8 +93,17 @@ div#large_navbar{
         color: $light_blue;
         text-transform: uppercase;
 
-        @media #{$large-only}{
-          padding-top: 0;
+        @media #{$medium-only}{
+          margin: 0px 0px 0px 103px;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          // background-color: red;
+          line-height: 18px;
+
+        }//ends @media medium-only
+
+        @media #{$large-up}{
           font-size: 52px;
           font-weight: 700;
           letter-spacing: 7px;
@@ -86,6 +112,13 @@ div#large_navbar{
         }//ends @media large-up
 
         &#app{
+
+          @media #{$medium-only}{
+            
+            margin-top: -50px;
+            color: #fff;
+
+          }//ends @media medium-only
 
           @media #{$large-up}{
             margin-left: 68px;
@@ -103,6 +136,10 @@ div#large_navbar{
     // background-color: yellow;
     text-align: right;
 
+    @media #{$medium-only}{
+      margin-right: 10px;
+    }
+
     @media #{$large-up}{
       margin-right: -65px;
     }
@@ -112,6 +149,18 @@ div#large_navbar{
 
       display: inline-block;
       letter-spacing: 2px;
+
+      &:hover{
+        border-color: #fff;
+
+        a {
+          color: #fff;
+        }
+      }//ends &:hover
+
+      @media #{$medium-only}{
+        margin: 10px 10px;
+      }//ends @media medium-only
 
       @media #{$large-up}{
 
@@ -127,23 +176,17 @@ div#large_navbar{
           padding-right: 0px;
         }
 
-        &:hover{
-          border-color: #fff;
-
-          a {
-            color: #fff;
-          }
-
-        }
-
       }//ends @media large-up
 
       a {
       
         text-transform: uppercase;
 
+        @media #{$medium-only}{ 
+          font-size: 15px;
+        }//ends @media medium-only
+
         @media #{$large-up}{ 
-          color: $light_blue;
           font-weight: 700;
           font-size: 15px;
         }//ends @media large-up
