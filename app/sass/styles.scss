@@ -5,14 +5,25 @@
 //General Styles
 $dark_gray: #26282D;
 $light_blue: #03C5C5;
+$lato: 'Lato', sans-serif;
+
+
+div#large_navbar{
+
+  background-color: $dark_gray;
+
+}
+
 
 
 nav.top-bar {
 
   background-color: $dark_gray;
   
-
   ul.title-area {
+    
+    margin-right: 50px;
+
     li.name{
       a{
         div.logo_image{
@@ -22,17 +33,24 @@ nav.top-bar {
         h1 {
   
           display: inline-block;
-          font-family: "Lato", sans-serif;
-          font-size: 40px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 7px;
+          font-family: $lato;
           color: $light_blue;
+          text-transform: uppercase;
 
-          &#app{
-            margin-left: 50px;
+          @media #{$large-only}{
+            font-size: 52px;
+            font-weight: 700;
+            letter-spacing: 7px;
+            background-color: red;
+
+            &#flappy{
+              margin-left: 50px;
+            }
+           
+            &#app{
+              margin-left: 50px;
+            }
           }
-
 
         }
 
