@@ -4107,7 +4107,7 @@ meta.foundation-mq-topbar {
           top: 50%;
           margin-top: -8px;
           right: 15px;
-          box-shadow: 0 0px 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
+          box-shadow: 0 0px 0 1px #03C5C5, 0 7px 0 1px #03C5C5, 0 14px 0 1px #03C5C5;
           width: 16px; }
         .top-bar .toggle-topbar.menu-icon a span:hover:after {
           box-shadow: 0 0px 0 1px "", 0 7px 0 1px "", 0 14px 0 1px ""; }
@@ -5588,46 +5588,51 @@ div#large_navbar {
     @media only screen and (min-width:64.063em) {
       div#large_navbar div.title {
         margin-left: -57px; } }
-    div#large_navbar div.title div.logo_image {
-      background-image: url('/images/logo.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: absolute; }
-      @media only screen and (min-width:40.063em) and (max-width:64em) {
-        div#large_navbar div.title div.logo_image {
-          width: 85px;
-          height: 50px;
-          top: -2px;
-          left: 22px; } }
-      @media only screen and (min-width:64.063em) {
-        div#large_navbar div.title div.logo_image {
-          width: 114px;
-          height: 73px;
-          top: 0px;
-          left: 210px; } }
-    div#large_navbar div.title h1 {
-      display: inline-block;
-      color: #03C5C5;
-      text-transform: uppercase; }
-      @media only screen and (min-width:40.063em) and (max-width:64em) {
-        div#large_navbar div.title h1 {
-          margin: 0px 0px 0px 103px;
-          font-size: 18px;
-          font-weight: 700;
-          letter-spacing: 2px;
-          line-height: 18px; } }
-      @media only screen and (min-width:64.063em) {
-        div#large_navbar div.title h1 {
-          font-size: 52px;
-          font-weight: 700;
-          letter-spacing: 7px; } }
-      @media only screen and (min-width:40.063em) and (max-width:64em) {
-        div#large_navbar div.title h1#app {
-          margin-top: -50px;
-          color: #fff; } }
-      @media only screen and (min-width:64.063em) {
-        div#large_navbar div.title h1#app {
-          margin-left: 68px; } }
+    @media only screen and (min-width:40.063em) and (max-width:64em) {
+      div#large_navbar div.title div.logo_image {
+        background-image: url('/images/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 85px;
+        height: 50px;
+        top: -2px;
+        left: 22px; } }
+    @media only screen and (min-width:64.063em) {
+      div#large_navbar div.title div.logo_image {
+        background-image: url('/images/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 114px;
+        height: 73px;
+        top: 0px;
+        left: 210px; } }
+    @media only screen and (min-width:40.063em) and (max-width:64em) {
+      div#large_navbar div.title h1 {
+        color: #03C5C5;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        display: inline-block;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 103px;
+        line-height: 18px; } }
+    @media only screen and (min-width:64.063em) {
+      div#large_navbar div.title h1 {
+        color: #03C5C5;
+        font-size: 52px;
+        font-weight: 700;
+        letter-spacing: 7px;
+        display: inline-block;
+        text-transform: uppercase; } }
+    @media only screen and (min-width:40.063em) and (max-width:64em) {
+      div#large_navbar div.title h1#app {
+        margin-top: -50px;
+        color: #fff; } }
+    @media only screen and (min-width:64.063em) {
+      div#large_navbar div.title h1#app {
+        margin-left: 68px; } }
   div#large_navbar ul.links_list {
     text-align: right; }
     @media only screen and (min-width:40.063em) and (max-width:64em) {
@@ -5664,3 +5669,31 @@ div#large_navbar {
           div#large_navbar ul.links_list li.nav_link a {
             font-weight: 700;
             font-size: 15px; } }
+
+nav.top-bar {
+  background-color: #26282D;
+  position: relative;
+  background-image: url('/images/border.png');
+  background-repeat: repeat-x;
+  background-position: center 0%; }
+  nav.top-bar ul.title-area {
+    margin-left: 85px;
+    background-color: red; }
+    nav.top-bar ul.title-area div.logo_image {
+      background-image: url('/images/logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 85px;
+      height: 50px;
+      top: 10px;
+      left: -80px; }
+    nav.top-bar ul.title-area h1 {
+      color: null;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      display: inline-block;
+      text-transform: uppercase; }
+      nav.top-bar ul.title-area h1#app {
+        color: #fff; }
