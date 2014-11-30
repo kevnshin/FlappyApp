@@ -209,35 +209,36 @@ div#large_navbar{
 nav.top-bar{
 
   background-color: $dark_gray;
-  position: relative;
   @include border_image();
+  height: 67px;
 
   ul.title-area {
 
-    margin-left: 85px;
-    background-color: red;
-    // display: inline-block;
-    // margin: 10px 0px;
-    // padding: 10px 0px;
+    margin-left: 95px;
+    height: 67px;
 
-    div.logo_image{
+    li.name{
+      a {
 
-      @include logo_image_sizing(85px, 50px, 10px, -80px);//(width, height, top, left)
+        display: inline-block;
+        position: relative;
+        margin-top: 15px;
 
-    }
+        div.logo_image{
 
+          @include logo_image_sizing(85px, 50px, -5px, -85px);//(width, height, top, left)
 
-    h1{
+        }
 
-      @include title_styling(18px, 3px, null, 400); //(font-size, letter-spacing, color, weight)
+        h1{
 
-      &#app{
-        color: #fff;
-      }
+          @include title_styling(18px, 3px, null, 400); //(font-size, letter-spacing, color, weight)
 
-    }
-
-  }
-
-
-}
+          &#app{
+            color: #fff;
+          }
+        }// ends h1
+      }//ends a
+    }//ends li.name
+  }//ends ul.title-area
+}// ends nav.top-bar
