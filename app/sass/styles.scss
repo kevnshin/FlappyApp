@@ -40,7 +40,6 @@ div#large_navbar{
   background-color: $dark_gray;
   background-image: url('/images/border.png');
   background-repeat: repeat-x;
-  // background-size: contain;
   background-position: center 0%;
 
   @media #{$medium-only}{
@@ -50,8 +49,6 @@ div#large_navbar{
   @media #{$large-up}{
     padding: 25px 0px 24px 0px;
   }
-
-  
 
   div.title{
 
@@ -85,7 +82,7 @@ div#large_navbar{
         left: 210px;
       }
 
-    }
+    }//ends div.logo_image
 
     h1{
 
@@ -94,24 +91,24 @@ div#large_navbar{
         text-transform: uppercase;
 
         @media #{$medium-only}{
+
           margin: 0px 0px 0px 103px;
           font-size: 18px;
           font-weight: 700;
           letter-spacing: 2px;
-          // background-color: red;
           line-height: 18px;
 
         }//ends @media medium-only
 
         @media #{$large-up}{
+
           font-size: 52px;
           font-weight: 700;
           letter-spacing: 7px;
-          // background-color: red;
 
         }//ends @media large-up
 
-        &#app{
+        &#app{ //changes behavior of the word APP
 
           @media #{$medium-only}{
             
@@ -123,12 +120,8 @@ div#large_navbar{
           @media #{$large-up}{
             margin-left: 68px;
           }//ends @media large-up
-
         }//ends &#app
-      
-
     }//ends h1
-
   }//ends div.title
 
   ul.links_list{
@@ -143,7 +136,6 @@ div#large_navbar{
     @media #{$large-up}{
       margin-right: -65px;
     }
-
 
     li.nav_link{
 
@@ -190,14 +182,8 @@ div#large_navbar{
           font-weight: 700;
           font-size: 15px;
         }//ends @media large-up
-
-    
       }//ends a
-      
-
     }//ends li.navlink
-
   }//ends ul.links_list
-
 }//ends div#large_navbar
 
