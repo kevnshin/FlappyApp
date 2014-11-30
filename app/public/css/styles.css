@@ -5555,3 +5555,18 @@ th.hide-for-touch {
     display: table-cell !important; }
   th.show-for-print {
     display: table-cell !important; } }
+
+nav.top-bar {
+  background-color: #26282D; }
+  nav.top-bar ul.title-area li.name a h1 {
+    display: inline-block;
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: #03C5C5; }
+    nav.top-bar ul.title-area li.name a h1#app {
+      margin-left: 50px; }
+  nav.top-bar section.top-bar-section ul.right li a {
+    background-color: blue; }

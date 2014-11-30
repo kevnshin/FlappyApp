@@ -1,2 +1,57 @@
 @import "partials/settings";
 @import "../public/bower_components/foundation/scss/foundation";
+
+
+//General Styles
+$dark_gray: #26282D;
+$light_blue: #03C5C5;
+
+
+nav.top-bar {
+
+  background-color: $dark_gray;
+  
+
+  ul.title-area {
+    li.name{
+      a{
+        div.logo_image{
+
+        }
+
+        h1 {
+  
+          display: inline-block;
+          font-family: "Lato", sans-serif;
+          font-size: 40px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 7px;
+          color: $light_blue;
+
+          &#app{
+            margin-left: 50px;
+          }
+
+
+        }
+
+      }
+    }
+  
+
+  }
+
+
+  section.top-bar-section {
+    ul.right {
+      li {
+        a {
+          background-color: blue;
+        }
+      }
+    }
+  }
+
+
+}
