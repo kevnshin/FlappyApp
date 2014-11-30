@@ -5556,27 +5556,80 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-div#large_navbar {
-  background-color: #26282D; }
+a, li, span, h1, h2, h3, h4, h5 {
+  font-family: 'Lato', sans-serif;
+  color: #03C5C5; }
+  a:visited, li:visited, span:visited, h1:visited, h2:visited, h3:visited, h4:visited, h5:visited {
+    color: #03C5C5; }
+  a:active, li:active, span:active, h1:active, h2:active, h3:active, h4:active, h5:active {
+    color: #03C5C5; }
+  a:link, li:link, span:link, h1:link, h2:link, h3:link, h4:link, h5:link {
+    color: #03C5C5; }
 
-nav.top-bar {
-  background-color: #26282D; }
-  nav.top-bar ul.title-area {
-    margin-right: 50px; }
-    nav.top-bar ul.title-area li.name a h1 {
+p {
+  font-family: 'Lato', sans-serif;
+  color: #26282D; }
+
+div#large_navbar {
+  background-color: #26282D;
+  background-image: url('/images/border.png');
+  background-repeat: repeat-x;
+  background-position: center 0%;
+  padding: 25px 0px 24px 0px; }
+  div#large_navbar div.title {
+    text-align: left;
+    position: relative;
+    padding: 0px; }
+    @media only screen and (min-width:64.063em) {
+      div#large_navbar div.title {
+        margin-left: -57px; } }
+    div#large_navbar div.title div.logo_image {
+      background-image: url('/images/logo.png');
+      width: 114px;
+      height: 73px;
+      position: absolute; }
+      @media only screen and (min-width:64.063em) {
+        div#large_navbar div.title div.logo_image {
+          top: 0px;
+          left: 210px; } }
+    div#large_navbar div.title h1 {
       display: inline-block;
-      font-family: 'Lato', sans-serif;
       color: #03C5C5;
       text-transform: uppercase; }
       @media only screen and (min-width:64.063em) and (max-width:90em) {
-        nav.top-bar ul.title-area li.name a h1 {
+        div#large_navbar div.title h1 {
+          padding-top: 0;
           font-size: 52px;
           font-weight: 700;
-          letter-spacing: 7px;
-          background-color: red; }
-          nav.top-bar ul.title-area li.name a h1#flappy {
-            margin-left: 50px; }
-          nav.top-bar ul.title-area li.name a h1#app {
-            margin-left: 50px; } }
-  nav.top-bar section.top-bar-section ul.right li a {
-    background-color: blue; }
+          letter-spacing: 7px; } }
+      @media only screen and (min-width:64.063em) {
+        div#large_navbar div.title h1#app {
+          margin-left: 68px; } }
+  div#large_navbar ul.links_list {
+    text-align: right; }
+    @media only screen and (min-width:64.063em) {
+      div#large_navbar ul.links_list {
+        margin-right: -65px; } }
+    div#large_navbar ul.links_list li.nav_link {
+      display: inline-block;
+      letter-spacing: 2px; }
+      @media only screen and (min-width:64.063em) {
+        div#large_navbar ul.links_list li.nav_link {
+          margin: 10px -3px;
+          padding: 10px 13px;
+          border-bottom: 5px solid #03C5C5; }
+          div#large_navbar ul.links_list li.nav_link#firstnav_link {
+            padding-left: 0px; }
+          div#large_navbar ul.links_list li.nav_link#lastnav_link {
+            padding-right: 0px; }
+          div#large_navbar ul.links_list li.nav_link:hover {
+            border-color: #fff; }
+            div#large_navbar ul.links_list li.nav_link:hover a {
+              color: #fff; } }
+      div#large_navbar ul.links_list li.nav_link a {
+        text-transform: uppercase; }
+        @media only screen and (min-width:64.063em) {
+          div#large_navbar ul.links_list li.nav_link a {
+            color: #03C5C5;
+            font-weight: 700;
+            font-size: 15px; } }

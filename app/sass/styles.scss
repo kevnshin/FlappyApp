@@ -2,74 +2,159 @@
 @import "../public/bower_components/foundation/scss/foundation";
 
 
-//General Styles
+//GENERAL STYLES
 $dark_gray: #26282D;
 $light_blue: #03C5C5;
-$lato: 'Lato', sans-serif;
 
+a, li, span, h1, h2, h3, h4, h5 {
+  font-family: 'Lato', sans-serif;
+  color: $light_blue;
 
-div#large_navbar{
+  &:visited{
+    color: $light_blue;    
+  }
 
-  background-color: $dark_gray;
+  &:active{
+    color: $light_blue;    
+  }
+
+  &:link{
+    color: $light_blue;    
+  }
+
+}
+
+p {
+
+  font-family: 'Lato', sans-serif;
+  color: $dark_gray;  
 
 }
 
 
+//SPECIFIC STYLES
 
-nav.top-bar {
+//LARGE && MEDIUM NAVBAR
+div#large_navbar{
 
   background-color: $dark_gray;
-  
-  ul.title-area {
-    
-    margin-right: 50px;
+  background-image: url('/images/border.png');
+  background-repeat: repeat-x;
+  // background-size: contain;
+  background-position: center 0%;
+  padding: 25px 0px 24px 0px;
 
-    li.name{
-      a{
-        div.logo_image{
+  div.title{
 
+    text-align: left;
+    // background-color: red;
+    position: relative;
+    padding: 0px;
+
+    @media #{$large-up}{
+      margin-left: -57px;
+    }
+
+    div.logo_image{
+
+      background-image: url('/images/logo.png');
+      // background-color: blue;
+      width: 114px;
+      height: 73px;
+      position: absolute;
+
+      @media #{$large-up}{
+        top: 0px;
+        left: 210px;
+      }
+
+    }
+
+    h1{
+
+        display: inline-block;
+        color: $light_blue;
+        text-transform: uppercase;
+
+        @media #{$large-only}{
+          padding-top: 0;
+          font-size: 52px;
+          font-weight: 700;
+          letter-spacing: 7px;
+          // background-color: red;
+
+        }//ends @media large-up
+
+        &#app{
+
+          @media #{$large-up}{
+            margin-left: 68px;
+          }//ends @media large-up
+
+        }//ends &#app
+      
+
+    }//ends h1
+
+  }//ends div.title
+
+  ul.links_list{
+
+    // background-color: yellow;
+    text-align: right;
+
+    @media #{$large-up}{
+      margin-right: -65px;
+    }
+
+
+    li.nav_link{
+
+      display: inline-block;
+      letter-spacing: 2px;
+
+      @media #{$large-up}{
+
+        margin: 10px -3px;
+        padding: 10px 13px;
+        border-bottom: 5px solid $light_blue;
+
+        &#firstnav_link {
+          padding-left: 0px;
+        }
+        
+        &#lastnav_link {
+          padding-right: 0px;
         }
 
-        h1 {
-  
-          display: inline-block;
-          font-family: $lato;
-          color: $light_blue;
-          text-transform: uppercase;
+        &:hover{
+          border-color: #fff;
 
-          @media #{$large-only}{
-            font-size: 52px;
-            font-weight: 700;
-            letter-spacing: 7px;
-            background-color: red;
-
-            &#flappy{
-              margin-left: 50px;
-            }
-           
-            &#app{
-              margin-left: 50px;
-            }
+          a {
+            color: #fff;
           }
 
         }
 
-      }
-    }
-  
+      }//ends @media large-up
 
-  }
+      a {
+      
+        text-transform: uppercase;
 
+        @media #{$large-up}{ 
+          color: $light_blue;
+          font-weight: 700;
+          font-size: 15px;
+        }//ends @media large-up
 
-  section.top-bar-section {
-    ul.right {
-      li {
-        a {
-          background-color: blue;
-        }
-      }
-    }
-  }
+    
+      }//ends a
+      
 
+    }//ends li.navlink
 
-}
+  }//ends ul.links_list
+
+}//ends div#large_navbar
+
