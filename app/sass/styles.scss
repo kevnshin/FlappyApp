@@ -5,6 +5,7 @@
 //GENERAL STYLES
 $dark_gray: #26282D;
 $light_blue: #03C5C5;
+$border_light_gray: #039696;
 
 a, li, span, h1, h2, h3, h4, h5 {
   font-family: 'Lato', sans-serif;
@@ -31,22 +32,24 @@ p {
 
 }
 
+
+
 //MIXINS
 
-@mixin title_styling($size , $spacing, $color: $light_blue, $weight: 700){
+@mixin text_styling($size , $spacing, $color: $light_blue, $weight: 700, $display: inline-block){
 
   color: $color;
   font-size: $size;
   font-weight: $weight;
   letter-spacing: $spacing;  
-  display: inline-block;
+  display: $display;
   text-transform: uppercase;
 
 }
 
-@mixin logo_image_sizing($width, $height, $top, $left){
+@mixin image_sizing($width, $height, $top, $left, $url: url('/images/logo.png')){
 
-  background-image: url('/images/logo.png');
+  background-image: $url; //default is logo image
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -97,11 +100,11 @@ div#large_navbar{
     div.logo_image{
 
       @media #{$medium-only}{
-        @include logo_image_sizing(85px, 50px, -2px, 22px);//(width, height, top, left)
+        @include image_sizing(85px, 50px, -2px, 22px);//(width, height, top, left)
       }
 
       @media #{$large-up}{
-        @include logo_image_sizing(114px, 73px, 0px, 210px);//(width, height, top, left)
+        @include image_sizing(114px, 73px, 0px, 210px);//(width, height, top, left)
       }
 
     }//ends div.logo_image
@@ -110,7 +113,7 @@ div#large_navbar{
 
         @media #{$medium-only}{
 
-          @include title_styling(18px, 2px);//(font-size, letter-spacing)
+          @include text_styling(18px, 2px);//(font-size, letter-spacing)
           margin: 0px 0px 0px 103px;        
           line-height: 18px;
 
@@ -118,7 +121,7 @@ div#large_navbar{
 
         @media #{$large-up}{
 
-          @include title_styling(52px, 7px);//(font-size, letter-spacing)
+          @include text_styling(52px, 7px);//(font-size, letter-spacing)
 
         }
 
@@ -226,13 +229,13 @@ nav.top-bar{
 
         div.logo_image{
 
-          @include logo_image_sizing(85px, 50px, -5px, -85px);//(width, height, top, left)
+          @include image_sizing(85px, 50px, -5px, -85px);//(width, height, top, left)
 
         }
 
         h1{
 
-          @include title_styling(18px, 3px, null, 400); //(font-size, letter-spacing, color, weight)
+          @include text_styling(18px, 3px, null, 400); //(font-size, letter-spacing, color, weight)
 
           &#app{
             color: #fff;
@@ -242,3 +245,68 @@ nav.top-bar{
     }//ends li.name
   }//ends ul.title-area
 }// ends nav.top-bar
+
+
+// START GAME OVERVIEW SECTION
+
+div#game_overview {
+
+  margin-top: 50px;
+  // background-color: red;
+  min-height: 271px;
+
+  div#banner_image{
+
+
+    @media #{$large-up}{
+      
+      margin-left: -45px;    
+      @include image_sizing(734px, 271px, 0px, 0px, url('/images/scenery.png'));//(width, height, top, left, url)
+      border: 4px solid black;
+    
+    }
+  }//div#banner_image
+
+  div#features{
+    // background-color: yellow;
+    margin-left: 25px;
+    margin-right: -68px;
+    min-height: 271px;
+    // background-color: yellow;
+
+    ul {
+
+      list-style-type: none;
+      text-align: center;
+      max-width: 329px;
+      
+      li.feature_list{
+
+        padding: 14px 0px 15px 0px;
+        border-top: 1px solid $border_light_gray;
+        background-color: $light_blue;
+        
+        &#featurelist_header{
+          
+          @include text_styling(15px , 2px, null, null, block);//(font-size, letter-spacing, color, weight, display)
+          background-color: $dark_gray;
+
+        }
+
+        a {
+
+          @include text_styling(15px , 2px, $dark_gray, 700, block);//(font-size, letter-spacing, color, weight, display)
+
+          span.highlight {
+            color: #fff;
+          }          
+
+        }//ends a
+
+      }//ends li.feature_list
+
+    }//ends ul
+  }//div#features
+
+
+}//ends div#game_overview

@@ -5701,3 +5701,48 @@ nav.top-bar {
         text-transform: uppercase; }
         nav.top-bar ul.title-area li.name a h1#app {
           color: #fff; }
+
+div#game_overview {
+  margin-top: 50px;
+  min-height: 271px; }
+  @media only screen and (min-width:64.063em) {
+    div#game_overview div#banner_image {
+      margin-left: -45px;
+      background-image: url('/images/scenery.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 734px;
+      height: 271px;
+      top: 0px;
+      left: 0px;
+      border: 4px solid black; } }
+  div#game_overview div#features {
+    margin-left: 25px;
+    margin-right: -68px;
+    min-height: 271px; }
+    div#game_overview div#features ul {
+      list-style-type: none;
+      text-align: center;
+      max-width: 329px; }
+      div#game_overview div#features ul li.feature_list {
+        padding: 14px 0px 15px 0px;
+        border-top: 1px solid #039696;
+        background-color: #03C5C5; }
+        div#game_overview div#features ul li.feature_list#featurelist_header {
+          color: null;
+          font-size: 15px;
+          font-weight: null;
+          letter-spacing: 2px;
+          display: block;
+          text-transform: uppercase;
+          background-color: #26282D; }
+        div#game_overview div#features ul li.feature_list a {
+          color: #26282D;
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          display: block;
+          text-transform: uppercase; }
+          div#game_overview div#features ul li.feature_list a span.highlight {
+            color: #fff; }
