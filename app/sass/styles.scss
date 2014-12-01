@@ -50,7 +50,7 @@ p {
 @mixin image_sizing($width, $height, $top, $left, $url: url('/images/logo.png')){
 
   background-image: $url; //default is logo image
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
   width: $width;
@@ -251,38 +251,85 @@ nav.top-bar{
 
 div#game_overview {
 
+  
   margin-top: 50px;
-  // background-color: red;
-  min-height: 271px;
 
-  div#banner_image{
+  @media #{$large-up}{
+      
+    min-height: 271px;
+
+  }  
+
+
+  div.columns{
+
+    @media #{$medium-only}{
+      
+      // background-color: red;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      width: 100%;
+      top: -50px;
+      
+    }
+
+    div#banner_image{
+
+      @media #{$medium-only}{
+        
+        background-image: url('/images/scenery.png'); //default is logo image
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 266px;
+        
+      }
+
+      @media #{$large-up}{
+        
+        margin-left: -45px;    
+        @include image_sizing(734px, 271px, 0px, 0px, url('/images/scenery.png'));//(width, height, top, left, url)
+        border: 4px solid black;
+      
+      }
+    }//div#banner_image
+
+  }
+  
+
+
+
+
+  div#features{
+
+    @media #{$medium-only}{
+      
+      margin-left: -18px;
+
+    }  
 
 
     @media #{$large-up}{
-      
-      margin-left: -45px;    
-      @include image_sizing(734px, 271px, 0px, 0px, url('/images/scenery.png'));//(width, height, top, left, url)
-      border: 4px solid black;
-    
-    }
-  }//div#banner_image
 
-  div#features{
-    // background-color: yellow;
-    margin-left: 25px;
-    margin-right: -68px;
-    min-height: 271px;
-    // background-color: yellow;
+      margin-left: 25px;
+      margin-right: -68px;        
+      min-height: 271px;
+      
+    }  
+
 
     ul {
 
       list-style-type: none;
       text-align: center;
-      max-width: 329px;
+
+      @media #{$large-up}{
+        max-width: 329px;
+      }
       
       li.feature_list{
 
-        padding: 14px 0px 15px 0px;
+        
         border-top: 1px solid $border_light_gray;
         background-color: $light_blue;
         
@@ -291,22 +338,33 @@ div#game_overview {
           @include text_styling(15px , 2px, null, null, block);//(font-size, letter-spacing, color, weight, display)
           background-color: $dark_gray;
 
+          @media #{$medium-only}{
+            padding: 11px 0px;
+          }
+
+          @media #{$large-up}{
+            padding: 14px 0px 15px 0px;
+          }
+
         }
 
         a {
 
           @include text_styling(15px , 2px, $dark_gray, 700, block);//(font-size, letter-spacing, color, weight, display)
 
+          @media #{$medium-only}{
+            padding: 15px 0px;
+          }
+
+          @media #{$large-up}{
+            padding: 14px 0px 15px 0px;
+          }
+
           span.highlight {
             color: #fff;
           }          
-
         }//ends a
-
       }//ends li.feature_list
-
     }//ends ul
   }//div#features
-
-
 }//ends div#game_overview
