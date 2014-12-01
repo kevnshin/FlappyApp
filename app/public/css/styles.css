@@ -5677,7 +5677,7 @@ nav.top-bar {
   background-position: center 0%;
   height: 67px; }
   nav.top-bar ul.title-area {
-    margin-left: 95px;
+    margin-left: 105px;
     height: 67px; }
     nav.top-bar ul.title-area li.name a {
       display: inline-block;
@@ -5691,7 +5691,7 @@ nav.top-bar {
         width: 85px;
         height: 50px;
         top: -5px;
-        left: -85px; }
+        left: -95px; }
       nav.top-bar ul.title-area li.name a h1 {
         color: null;
         font-size: 18px;
@@ -5707,19 +5707,21 @@ div#game_overview {
   @media only screen and (min-width:64.063em) {
     div#game_overview {
       min-height: 271px; } }
-  @media only screen and (min-width:40.063em) and (max-width:64em) {
+  @media only screen and (max-width:64em) {
     div#game_overview div.columns {
       padding: 0;
       margin: 0;
       position: relative;
       width: 100%;
       top: -50px; } }
-  @media only screen and (min-width:40.063em) and (max-width:64em) {
+  @media only screen and (max-width:64em) {
     div#game_overview div.columns div#banner_image {
       background-image: url('/images/scenery.png');
       background-repeat: no-repeat;
-      background-size: 100% 100%;
-      height: 266px; } }
+      background-size: cover;
+      background-position: 95% 0%;
+      height: 266px;
+      max-height: 266px; } }
   @media only screen and (min-width:64.063em) {
     div#game_overview div.columns div#banner_image {
       margin-left: -45px;
@@ -5732,7 +5734,7 @@ div#game_overview {
       top: 0px;
       left: 0px;
       border: 4px solid black; } }
-  @media only screen and (min-width:40.063em) and (max-width:64em) {
+  @media only screen and (max-width:64em) {
     div#game_overview div#features {
       margin-left: -18px; } }
   @media only screen and (min-width:64.063em) {
@@ -5757,7 +5759,7 @@ div#game_overview {
         display: block;
         text-transform: uppercase;
         background-color: #26282D; }
-        @media only screen and (min-width:40.063em) and (max-width:64em) {
+        @media only screen and (max-width:64em) {
           div#game_overview div#features ul li.feature_list#featurelist_header {
             padding: 11px 0px; } }
         @media only screen and (min-width:64.063em) {
@@ -5770,7 +5772,7 @@ div#game_overview {
         letter-spacing: 2px;
         display: block;
         text-transform: uppercase; }
-        @media only screen and (min-width:40.063em) and (max-width:64em) {
+        @media only screen and (max-width:64em) {
           div#game_overview div#features ul li.feature_list a {
             padding: 15px 0px; } }
         @media only screen and (min-width:64.063em) {

@@ -217,7 +217,7 @@ nav.top-bar{
 
   ul.title-area {
 
-    margin-left: 95px;
+    margin-left: 105px;
     height: 67px;
 
     li.name{
@@ -229,7 +229,7 @@ nav.top-bar{
 
         div.logo_image{
 
-          @include image_sizing(85px, 50px, -5px, -85px);//(width, height, top, left)
+          @include image_sizing(85px, 50px, -5px, -95px);//(width, height, top, left)
 
         }
 
@@ -263,9 +263,8 @@ div#game_overview {
 
   div.columns{
 
-    @media #{$medium-only}{
+    @media #{$medium-down}{
       
-      // background-color: red;
       padding: 0;
       margin: 0;
       position: relative;
@@ -276,14 +275,27 @@ div#game_overview {
 
     div#banner_image{
 
-      @media #{$medium-only}{
+      @media #{$medium-down}{
         
         background-image: url('/images/scenery.png'); //default is logo image
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
+        background-position: 95% 0%;
         height: 266px;
+        max-height: 266px;
         
       }
+
+      //DO A MID MEDIUM TO LARGE FIX HERE starting at 748px
+
+      // @media #{$medium-only}{
+        
+      //   background-image: url('/images/scenery.png'); //default is logo image
+      //   background-repeat: no-repeat;
+      //   background-size: 100% 100%;
+      //   height: 266px;
+        
+      // }
 
       @media #{$large-up}{
         
@@ -302,9 +314,10 @@ div#game_overview {
 
   div#features{
 
-    @media #{$medium-only}{
+    @media #{$medium-down}{
       
       margin-left: -18px;
+
 
     }  
 
@@ -338,7 +351,7 @@ div#game_overview {
           @include text_styling(15px , 2px, null, null, block);//(font-size, letter-spacing, color, weight, display)
           background-color: $dark_gray;
 
-          @media #{$medium-only}{
+          @media #{$medium-down}{
             padding: 11px 0px;
           }
 
@@ -352,7 +365,7 @@ div#game_overview {
 
           @include text_styling(15px , 2px, $dark_gray, 700, block);//(font-size, letter-spacing, color, weight, display)
 
-          @media #{$medium-only}{
+          @media #{$medium-down}{
             padding: 15px 0px;
           }
 
