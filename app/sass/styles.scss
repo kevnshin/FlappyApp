@@ -388,9 +388,11 @@ div#game_overview {
 
 div#description {
 
-  // background-color: red;
+  @media #{$small-only}{
+    margin: -42px 36px 0px;
+  }
 
-  @media #{$medium-down}{
+  @media #{$medium-only}{
     margin: -37px 50px 0px;
   }
 
@@ -400,36 +402,27 @@ div#description {
 
   div.columns{
 
-    // background-color: green;
     padding: 0;
 
     p {
+      
+      @media #{$small-only}{
+        @include text_styling(25px , 0px, $dark_gray, 700);//(font-size, letter-spacing, color, weight, display)
+        text-transform: none;
+        line-height: 32px;      
+      }      
 
-      // background-color: orange;
-
-      @media #{$medium-down}{
-
+      @media #{$medium-only}{
         @include text_styling(25px , 0px, $dark_gray, 700);//(font-size, letter-spacing, color, weight, display)
         text-transform: none;
         line-height: 31px;
-
-
       }
 
       @media #{$large-up}{
-
         @include text_styling(28.5px , 0.5px, $dark_gray, 700);//(font-size, letter-spacing, color, weight, display)
         text-transform: none;
         line-height: 33px;
-
       }
-
     }//ends p
-
-
   }//ends div.columns
-
-
-
-
 }//ends div#description
