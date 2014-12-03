@@ -434,35 +434,76 @@ div#footer{
 
   background-color: $dark_gray;
   @include border_image();
-  min-height: 332px;
+  
+  @media #{$medium-only}{
+    margin-top: 20px;
+    padding-top: 54px;
+    min-height: 292px;
+  }
 
   @media #{$large-up}{
-    
+    //FIX make mixin for these!!
     margin-top: 20px;
     padding-top: 55px;
-
+    min-height: 332px;
   }
 
   ul{
 
     list-style-type: none;
-    @include text_styling(16px , 2px, null, 400);//(font-size, letter-spacing, color, weight, display)
     text-align: left;
-    line-height: 11px;
-    margin-left: -16px;
-    max-height: 155px;
-    overflow: visible;
 
-    &#commercial{
-      margin-left: -15px;
+    @media #{$medium-only}{
+
+      @include text_styling(15px , 2px, null, 400);//(font-size, letter-spacing, color, weight, display)
+      line-height: 11px;
+
+      &#about{
+        margin-left: 34px;
+      }
+
+      //FIX RESPONSIVENESS
+      &#commercial{
+        margin-left: -18px;
+      }
+
+      &#tutorials{
+        margin-left: -2px;
+      }
+      
+    
     }
+    
 
-    &#tutorials{
-      margin-left: -7px;
-    }
 
+    @media #{$large-up}{
+      @include text_styling(16px , 2px, null, 400);//(font-size, letter-spacing, color, weight, display)
+      text-align: left;
+      line-height: 11px;
+      margin-left: -16px;
+      max-height: 155px;
+      overflow: visible;
+
+      &#commercial{
+        margin-left: -15px;
+      }
+
+      &#tutorials{
+        margin-left: -7px;
+      }
+    }//ends @media large-up
+   
 
     li{
+
+      @media #{$medium-only}{
+        // padding: 0px 0px 0px 28px;
+        padding-bottom: 21.5px;
+
+        &.last_link{
+          padding-bottom: 0px;
+        }
+      }//ends @media large-up
 
       @media #{$large-up}{
         padding: 0px 0px 0px 28px;
@@ -497,6 +538,16 @@ div#footer{
 // }
 
   div#copyright{
+
+    @media #{$medium-only}{
+
+      text-align: center;
+      margin-top: 27px;
+
+      span{
+        @include text_styling(15px, 2px, #fff, 400);//(font-size, letter-spacing, color, weight, display)
+      }
+    }//ends @media medium-only
     
     @media #{$large-up}{
 
@@ -513,6 +564,5 @@ div#footer{
         @include text_styling(15px, 2px, $dark_gray);//(font-size, letter-spacing, color, weight, display)
       }
     }//ends @media large-up
-
   }//ends div#copyright
 }//ends div#footer
