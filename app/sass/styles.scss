@@ -434,10 +434,16 @@ div#footer{
 
   background-color: $dark_gray;
   @include border_image();
+
+  @media #{$small-only}{
+    margin-top: 15px;
+    padding-top: 29px;
+    min-height: 286px;
+  }
   
   @media #{$medium-only}{
     margin-top: 20px;
-    padding-top: 54px;
+    padding-top: 42px;
     min-height: 292px;
   }
 
@@ -453,27 +459,34 @@ div#footer{
     list-style-type: none;
     text-align: left;
 
-    @media #{$medium-only}{
+    @media #{$medium-down}{
 
       @include text_styling(15px , 2px, null, 400);//(font-size, letter-spacing, color, weight, display)
-      line-height: 11px;
+      line-height: 33.5px;
 
       &#about{
-        margin-left: 34px;
+      margin-left: 36px;
       }
 
-      //FIX RESPONSIVENESS
       &#commercial{
-        margin-left: -18px;
+        margin-left: -12px;
       }
 
       &#tutorials{
-        margin-left: -2px;
+        margin-left: 10px;
       }
-      
-    
-    }
-    
+    }//ends @media medium-down
+
+    @media #{$small-only}{
+
+      &#about{
+      margin-left: 24px;
+      }
+
+      &#tutorials{
+        margin-left: 15px;
+      }
+    }//ends @media small-only
 
 
     @media #{$large-up}{
@@ -496,15 +509,6 @@ div#footer{
 
     li{
 
-      @media #{$medium-only}{
-        // padding: 0px 0px 0px 28px;
-        padding-bottom: 21.5px;
-
-        &.last_link{
-          padding-bottom: 0px;
-        }
-      }//ends @media large-up
-
       @media #{$large-up}{
         padding: 0px 0px 0px 28px;
         border-left: 3.5px solid $light_blue;
@@ -516,39 +520,32 @@ div#footer{
       }//ends @media large-up
 
       a {
+
         &:hover{
+
           color:#fff;
-        }
-      }
+        }//ends &:hover
+      }//ends a
     }//ends li
   }//ends ul
 
-// div.row{
-
-//   div.small-12{
-
-//     background-color: red;
-//     padding: 0;
-//     margin-top: 35px;
-//     margin-left: -4px;
-
-//   }
-
-
-// }
-
   div#copyright{
 
-    @media #{$medium-only}{
+    @media #{$medium-down}{
 
       text-align: center;
-      margin-top: 27px;
+      margin-top: 21px;
 
       span{
         @include text_styling(15px, 2px, #fff, 400);//(font-size, letter-spacing, color, weight, display)
       }
-    }//ends @media medium-only
+    }//ends @media medium-down
     
+
+    @media #{$medium-only}{
+      margin-top: 17px;
+    }//ends @media medium-only
+
     @media #{$large-up}{
 
       background-color: $light_blue;
