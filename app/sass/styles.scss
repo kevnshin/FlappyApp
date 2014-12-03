@@ -321,6 +321,7 @@ div#game_overview {
       
       margin-left: -18px;
 
+
     }  
 
 
@@ -389,6 +390,10 @@ div#description {
 
   // background-color: red;
 
+  @media #{$medium-down}{
+    margin: -37px 50px 0px;
+  }
+
   @media #{$large-up}{
     margin-top: 10px;
   }
@@ -401,6 +406,15 @@ div#description {
     p {
 
       // background-color: orange;
+
+      @media #{$medium-down}{
+
+        @include text_styling(25px , 0px, $dark_gray, 700);//(font-size, letter-spacing, color, weight, display)
+        text-transform: none;
+        line-height: 31px;
+
+
+      }
 
       @media #{$large-up}{
 
