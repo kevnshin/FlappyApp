@@ -94,7 +94,7 @@ div#large_navbar{
     padding: 0px;
 
     @media #{$large-up}{
-      margin-left: -57px;
+      margin-left: -15px;
     }
 
     div.logo_image{
@@ -104,7 +104,7 @@ div#large_navbar{
       }
 
       @media #{$large-up}{
-        @include image_sizing(114px, 73px, 0px, 210px);//(width, height, top, left)
+        @include image_sizing(114px, 73px, 0px, 214px);//(width, height, top, left)
       }
 
     }//ends div.logo_image
@@ -135,7 +135,7 @@ div#large_navbar{
           }//ends @media medium-only
 
           @media #{$large-up}{
-            margin-left: 68px;
+            margin-left: 69px;
           }//ends @media large-up
         }//ends &#app
     }//ends h1
@@ -303,8 +303,9 @@ div#game_overview {
 
       @media #{$large-up}{
           
-        @include image_sizing(737px, 271px, 0px, 0px, url('/images/scenery.png'));//(width, height, top, left, url)
+        @include image_sizing(735px, 271px, 0px, 0px, url('/images/scenery.png'));//(width, height, top, left, url)
         border: 4px solid black;
+        margin-left: 3px;
       
       }
     }//div#banner_image
@@ -327,9 +328,10 @@ div#game_overview {
 
     @media #{$large-up}{
 
-      margin-left: 5px;
+      margin-left: 8px;
       margin-right: -68px;
       min-height: 271px;
+      //FIX right side is thinner by ~5 px
       
     }  
 
@@ -385,6 +387,7 @@ div#game_overview {
   }//div#features
 }//ends div#game_overview
 
+//MIDDLE DESCRIPTION PARAGRAPH
 
 div#description {
 
@@ -396,16 +399,12 @@ div#description {
     margin: -37px 50px 0px;
   }
 
-  @media #{$large-up}{
-    margin-top: 10px;
-  }
-
   div.columns{
 
     padding: 0;
 
     p {
-      
+
       @media #{$small-only}{
         @include text_styling(25px , 0px, $dark_gray, 700);//(font-size, letter-spacing, color, weight, display)
         text-transform: none;
@@ -426,3 +425,94 @@ div#description {
     }//ends p
   }//ends div.columns
 }//ends div#description
+
+
+//FOOTER AREA
+
+
+div#footer{
+
+  background-color: $dark_gray;
+  @include border_image();
+  min-height: 332px;
+
+  @media #{$large-up}{
+    
+    margin-top: 20px;
+    padding-top: 55px;
+
+  }
+
+  ul{
+
+    list-style-type: none;
+    @include text_styling(16px , 2px, null, 400);//(font-size, letter-spacing, color, weight, display)
+    text-align: left;
+    line-height: 11px;
+    margin-left: -16px;
+    max-height: 155px;
+    overflow: visible;
+
+    &#commercial{
+      margin-left: -15px;
+    }
+
+    &#tutorials{
+      margin-left: -7px;
+    }
+
+
+    li{
+
+      @media #{$large-up}{
+        padding: 0px 0px 0px 28px;
+        border-left: 3.5px solid $light_blue;
+        padding-bottom: 21.5px;
+
+        &.last_link{
+          padding-bottom: 0px;
+        }
+      }//ends @media large-up
+
+      a {
+        &:hover{
+          color:#fff;
+        }
+      }
+    }//ends li
+  }//ends ul
+
+// div.row{
+
+//   div.small-12{
+
+//     background-color: red;
+//     padding: 0;
+//     margin-top: 35px;
+//     margin-left: -4px;
+
+//   }
+
+
+// }
+
+  div#copyright{
+    
+    @media #{$large-up}{
+
+      background-color: $light_blue;
+      text-align: center;
+      padding: 5.5px 0px;
+      margin-left: -19px;
+      margin-right: -14px;
+      margin-top: 36px;
+
+      //FIX Make it more respnsive!
+
+      span{
+        @include text_styling(15px, 2px, $dark_gray);//(font-size, letter-spacing, color, weight, display)
+      }
+    }//ends @media large-up
+
+  }//ends div#copyright
+}//ends div#footer
