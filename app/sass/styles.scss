@@ -149,7 +149,11 @@ div#large_navbar{
     text-align: right;
 
     @media #{$medium-only}{
-      margin-right: 10px;
+      margin-right: 3.5%;
+    }
+
+    @media #{$small-medium-only}{
+      margin-right: 1%;
     }
 
     @media #{$large-up}{
@@ -170,8 +174,12 @@ div#large_navbar{
       }//ends &:hover
 
       @media #{$medium-only}{
-        margin: 10px 10px;
+        margin: 10px 2%;//10px;
       }//ends @media medium-only
+
+      @media #{$small-medium-only}{
+        margin: 10px 1%;
+      }
 
       @media #{$large-up}{
 
@@ -208,8 +216,6 @@ div#large_navbar{
 
 //END OF MEDIUM && LARGE NAVBAR
 
-//FIX NAVBAR ON MOBILE DROPDOWN
-
 //START MOBILE NAVBAR
 
 nav.top-bar{
@@ -220,7 +226,6 @@ nav.top-bar{
 
   ul.title-area {
 
-    // margin-left: 105px;
     height: 67px;
     background-color: $dark_gray;
 
@@ -260,10 +265,10 @@ nav.top-bar{
             box-shadow: 0 0px 0 2px #03C5C5, 0 8px 0 2px #03C5C5, 0 16px 0 2px #03C5C5;
             width: 23px;
             margin-right: 5px;
-          }
-        }
-      }
-    }
+          }//ends &:after
+        }//ends span
+      }//ends a
+    }//ends li.menu-icon
   }//ends ul.title-area
 
   section.top-bar-section{
@@ -319,22 +324,10 @@ div#game_overview {
         background-image: url('/images/scenery.png'); //default is logo image
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 95% 0%;
+        background-position: center right;
         height: 266px;
-        max-height: 266px;
         
       }
-
-      //DO A MID MEDIUM TO LARGE FIX HERE starting at 748px
-
-      // @media #{$medium-only}{
-        
-      //   background-image: url('/images/scenery.png'); //default is logo image
-      //   background-repeat: no-repeat;
-      //   background-size: 100% 100%;
-      //   height: 266px;
-        
-      // }
 
       @media #{$large-up}{
           
@@ -343,6 +336,13 @@ div#game_overview {
         margin-left: 3px;
       
       }//ends @media large-up
+
+      @media #{$medium-large-only}{
+          
+        width: 715px;
+      
+      }//ends @media large-up
+
     }//ends div#banner_image
   }//ends div.columns
   
@@ -359,9 +359,8 @@ div#game_overview {
       margin-left: 8px;
       margin-right: -68px;
       min-height: 271px;
-      //FIX right side is thinner by ~5 px
       
-    }  
+    }   
 
     ul {
 
@@ -494,6 +493,15 @@ div#footer{
       }
     }//ends @media medium-down
 
+    @media #{$small-medium-only}{
+      &#commercial{
+        li:first-child{
+          padding-top: 8px;
+          line-height: 15px;
+        }
+      }
+    }//ends @media small-medium-only
+
     @media #{$small-only}{
 
       &#about{
@@ -560,18 +568,28 @@ div#footer{
 
     @media #{$large-up}{
 
-      background-color: $light_blue;
-      text-align: center;
-      padding: 5.5px 0px;
-      margin-left: -19px;
-      margin-right: -14px;
       margin-top: 36px;
-
-      //FIX Make it more respnsive!
-
-      span{
-        @include text_styling(15px, 2px, $dark_gray);//(font-size, letter-spacing, color, weight, display)
-      }
+  
+      div.row{
+        div.columns{
+          padding: 0;
+          background-color: $light_blue;
+          text-align: center;
+          padding: 5.5px 0px;
+          span{
+            display: block;
+            @include text_styling(15px, 2px, $dark_gray);//(font-size, letter-spacing, color, weight, display)
+          }//ends span
+        }//ends div.columns
+      }//ends div.row
     }//ends @media large-up
+
+    @media #{$medium-large-only}{
+  
+      text-align: center;
+      div.row{
+        max-width: 975px;
+      }//ends div.row
+    }//ends @media medium-large-only;
   }//ends div#copyright
 }//ends div#footer
