@@ -1,0 +1,5 @@
+{
+  "title" : "about",
+  "date" : "Wed Dec 03 2014 18:35:17 GMT-1000 (HST)",
+  "body" : "Flappy <span class=\"bird\">Bird</span> is a side-scrolling mobile game featuring 2D retro style graphics. The objective is to direct a flying <span class=\"bird\">bird</span>, named &ldquo;Faby&rdquo,which moves continuously to the right, between sets of Mario-like pipes. If the player touches the pipes, it ends the game. The <span class=\"bird\">bird</span> briefly flaps upward each time the player taps the screen; if the screen is not tapped, the <span class=\"bird\">bird</span> falls due to gravity. The player is scored based on the number of pipe sets that the <span class=\"bird\">bird</span> successfully passes through, with medals awarded for the score at the end of the game."
+}
