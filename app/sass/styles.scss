@@ -160,7 +160,7 @@ div#large_navbar{
       margin-right: -10px;
     }
 
-    li.nav_link{
+    li{
 
       display: inline-block;
       letter-spacing: 2px;
@@ -168,7 +168,7 @@ div#large_navbar{
       &:hover{
         border-color: #fff;
 
-        a {
+        a.nav_link {
           color: #fff;
         }
       }//ends &:hover
@@ -388,8 +388,7 @@ div#game_overview {
           @media #{$large-up}{
             padding: 14px 0px 15px 0px;
           }
-
-        }
+        }//ends $#featurelist)header
 
         a {
 
@@ -447,6 +446,26 @@ div#description {
         text-transform: none;
         line-height: 33px;
       }
+
+      //jQuery ADDED ITEM STYLING
+
+      span.bird{
+        
+        background-color: red;
+        div.smallbird_pic {
+
+          background-image: url('/images/logo.png');
+          background-size: cover;
+          display: inline-block;
+          width: 50px;
+          height: 32px;
+
+        }//ends div.smallbird_pic
+      }//ends span.bird
+
+      //END jQuery ADDED ITEM STYLING
+
+
     }//ends p
   }//ends div.columns
 }//ends div#description
@@ -593,3 +612,6 @@ div#footer{
     }//ends @media medium-large-only;
   }//ends div#copyright
 }//ends div#footer
+
+
+

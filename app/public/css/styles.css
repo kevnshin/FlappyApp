@@ -5644,35 +5644,35 @@ div#large_navbar {
     @media only screen and (min-width:64.063em) {
       div#large_navbar ul.links_list {
         margin-right: -10px; } }
-    div#large_navbar ul.links_list li.nav_link {
+    div#large_navbar ul.links_list li {
       display: inline-block;
       letter-spacing: 2px; }
-      div#large_navbar ul.links_list li.nav_link:hover {
+      div#large_navbar ul.links_list li:hover {
         border-color: #fff; }
-        div#large_navbar ul.links_list li.nav_link:hover a {
+        div#large_navbar ul.links_list li:hover a.nav_link {
           color: #fff; }
       @media only screen and (min-width:40.063em) and (max-width:64em) {
-        div#large_navbar ul.links_list li.nav_link {
+        div#large_navbar ul.links_list li {
           margin: 10px 2%; } }
       @media only screen and (min-width:40.063em) and (max-width:43.4375rem) {
-        div#large_navbar ul.links_list li.nav_link {
+        div#large_navbar ul.links_list li {
           margin: 10px 1%; } }
       @media only screen and (min-width:64.063em) {
-        div#large_navbar ul.links_list li.nav_link {
+        div#large_navbar ul.links_list li {
           margin: 10px -3px;
           padding: 10px 13px;
           border-bottom: 5px solid #03C5C5; }
-          div#large_navbar ul.links_list li.nav_link.about_link {
+          div#large_navbar ul.links_list li.about_link {
             padding-left: 0px; }
-          div#large_navbar ul.links_list li.nav_link.signup_link {
+          div#large_navbar ul.links_list li.signup_link {
             padding-right: 0px; } }
-      div#large_navbar ul.links_list li.nav_link a {
+      div#large_navbar ul.links_list li a {
         text-transform: uppercase; }
         @media only screen and (min-width:40.063em) and (max-width:64em) {
-          div#large_navbar ul.links_list li.nav_link a {
+          div#large_navbar ul.links_list li a {
             font-size: 15px; } }
         @media only screen and (min-width:64.063em) {
-          div#large_navbar ul.links_list li.nav_link a {
+          div#large_navbar ul.links_list li a {
             font-weight: 700;
             font-size: 15px; } }
 
@@ -5855,6 +5855,14 @@ div#description div.columns {
       text-transform: uppercase;
       text-transform: none;
       line-height: 33px; } }
+  div#description div.columns p span.bird {
+    background-color: red; }
+    div#description div.columns p span.bird div.smallbird_pic {
+      background-image: url('/images/logo.png');
+      background-size: cover;
+      display: inline-block;
+      width: 50px;
+      height: 32px; }
 
 div#footer {
   background-color: #26282D;

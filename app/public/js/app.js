@@ -12,13 +12,23 @@ $(function() {
     spec = data.body;
   });//ends GET request for spec
 
-  $("div#large_navbar ul.links_list li.spec_link a").click(function(){
+  $("a.spec_link").click(function(){
     $("div#description p").html("");
     $("div#description p").append(spec);
   });//ends onClick listener for Spec
 
-  $("div#large_navbar ul.links_list li.about_link a").click(function(){
+  $("a.about_link").click(function(){
     $("div#description p").html("");
     $("div#description p").append(about);
   });//ends onClick listener for About
+
+  $("div#description").on("mouseenter", "span.bird", function () {
+    $(this).html("<div class='smallbird_pic'></div>");
+  });
+
+  $("div#description").on("mouseleave", "span.bird", function () {
+    $(this).html("bird");
+  });
+
+
 });//ends entire function
