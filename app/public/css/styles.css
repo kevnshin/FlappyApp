@@ -5662,9 +5662,9 @@ div#large_navbar {
           margin: 10px -3px;
           padding: 10px 13px;
           border-bottom: 5px solid #03C5C5; }
-          div#large_navbar ul.links_list li.nav_link#firstnav_link {
+          div#large_navbar ul.links_list li.nav_link.about_link {
             padding-left: 0px; }
-          div#large_navbar ul.links_list li.nav_link#lastnav_link {
+          div#large_navbar ul.links_list li.nav_link.signup_link {
             padding-right: 0px; } }
       div#large_navbar ul.links_list li.nav_link a {
         text-transform: uppercase; }

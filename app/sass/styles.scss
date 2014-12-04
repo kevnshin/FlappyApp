@@ -187,11 +187,11 @@ div#large_navbar{
         padding: 10px 13px;
         border-bottom: 5px solid $light_blue;
 
-        &#firstnav_link {
+        &.about_link {
           padding-left: 0px;
         }
         
-        &#lastnav_link {
+        &.signup_link {
           padding-right: 0px;
         }
 
