@@ -1362,7 +1362,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
+$topbar-bg-color: #26282D;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1417,7 +1417,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $topbar-menu-link-color: $white;
 $topbar-menu-icon-color: #03C5C5;
 // $topbar-menu-link-color-toggled: $jumbo;
-// $topbar-menu-icon-color-toggled: $jumbo;
+$topbar-menu-icon-color-toggled: #03C5C5;
 
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;

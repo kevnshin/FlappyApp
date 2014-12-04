@@ -4008,7 +4008,7 @@ meta.foundation-mq-topbar {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #333333; }
+  background: #26282D; }
   .contain-to-grid .top-bar {
     margin-bottom: 0; }
 
@@ -4036,7 +4036,7 @@ meta.foundation-mq-topbar {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #333333;
+  background: #26282D;
   margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
@@ -4115,11 +4115,11 @@ meta.foundation-mq-topbar {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #333333; }
+      background: #26282D; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span::after {
-        box-shadow: 0 0px 0 1px #888888, 0 7px 0 1px #888888, 0 14px 0 1px #888888; }
+        box-shadow: 0 0px 0 1px #03C5C5, 0 7px 0 1px #03C5C5, 0 14px 0 1px #03C5C5; }
 
 .top-bar-section {
   left: 0;
@@ -4134,7 +4134,7 @@ meta.foundation-mq-topbar {
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider, .top-bar-section [role="separator"] {
-    border-top: solid 1px #1a1a1a;
+    border-top: solid 1px #131416;
     clear: both;
     height: 1px;
     width: 100%; }
@@ -4322,7 +4322,7 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width:40.063em) {
   .top-bar {
-    background: #333333;
+    background: #26282D;
     overflow: visible; }
     .top-bar:before, .top-bar:after {
       content: " ";
@@ -4340,7 +4340,7 @@ meta.foundation-mq-topbar {
       position: relative;
       top: 7px; }
     .top-bar.expanded {
-      background: #333333; }
+      background: #26282D; }
   .contain-to-grid .top-bar {
     max-width: 68.75rem;
     margin: 0 auto;
@@ -4363,7 +4363,7 @@ meta.foundation-mq-topbar {
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
-      background: #333333; }
+      background: #26282D; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
         background-color: #555555;
         background: #272727; }
@@ -4446,12 +4446,12 @@ meta.foundation-mq-topbar {
     .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
       border-bottom: none;
       border-top: none;
-      border-right: solid 1px #4e4e4e;
+      border-right: solid 1px #3f434b;
       clear: none;
       height: 45px;
       width: 0; }
     .top-bar-section .has-form {
-      background: #333333;
+      background: #26282D;
       padding: 0 15px;
       height: 45px; }
     .top-bar-section .right li .dropdown {
@@ -5677,30 +5677,58 @@ nav.top-bar {
   background-position: center 0%;
   height: 67px; }
   nav.top-bar ul.title-area {
-    margin-left: 105px;
-    height: 67px; }
-    nav.top-bar ul.title-area li.name a {
-      display: inline-block;
-      position: relative;
-      margin-top: 15px; }
-      nav.top-bar ul.title-area li.name a div.logo_image {
-        background-image: url('/images/logo.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: absolute;
-        width: 85px;
-        height: 50px;
-        top: -5px;
-        left: -95px; }
-      nav.top-bar ul.title-area li.name a h1 {
-        color: null;
-        font-size: 18px;
-        font-weight: 400;
-        letter-spacing: 3px;
+    height: 67px;
+    background-color: #26282D; }
+    nav.top-bar ul.title-area li.name {
+      background-image: url('/images/border.png');
+      background-repeat: repeat-x;
+      background-position: center 0%; }
+      nav.top-bar ul.title-area li.name a {
         display: inline-block;
-        text-transform: uppercase; }
-        nav.top-bar ul.title-area li.name a h1#app {
-          color: #fff; }
+        position: relative;
+        padding-top: 15px;
+        height: 67px; }
+        nav.top-bar ul.title-area li.name a div.logo_image {
+          background-image: url('/images/logo.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          position: absolute;
+          width: 85px;
+          height: 50px;
+          top: 10px;
+          left: 10px;
+          background-color: #26282D; }
+        nav.top-bar ul.title-area li.name a h1 {
+          color: null;
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: 3px;
+          display: inline-block;
+          text-transform: uppercase; }
+          nav.top-bar ul.title-area li.name a h1#flappy {
+            margin-left: 102px; }
+          nav.top-bar ul.title-area li.name a h1#app {
+            color: #fff; }
+    nav.top-bar ul.title-area li.menu-icon a span:after {
+      box-shadow: 0 0px 0 2px #03C5C5, 0 8px 0 2px #03C5C5, 0 16px 0 2px #03C5C5;
+      width: 23px;
+      margin-right: 5px; }
+  nav.top-bar section.top-bar-section {
+    background-color: #26282D; }
+    nav.top-bar section.top-bar-section ul.right {
+      background-color: #03C5C5; }
+      nav.top-bar section.top-bar-section ul.right li {
+        background-color: #26282D;
+        margin: 1px 0px; }
+        nav.top-bar section.top-bar-section ul.right li a {
+          color: #fff;
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: 2px;
+          display: block;
+          text-transform: uppercase; }
+          nav.top-bar section.top-bar-section ul.right li a.blue {
+            color: #03C5C5; }
 
 div#game_overview {
   margin-top: 50px; }

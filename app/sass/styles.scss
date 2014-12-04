@@ -26,13 +26,9 @@ a, li, span, h1, h2, h3, h4, h5 {
 }
 
 p {
-
   font-family: 'Lato', sans-serif;
   color: $dark_gray;  
-
 }
-
-
 
 //MIXINS
 
@@ -66,6 +62,12 @@ p {
   background-repeat: repeat-x;
   background-position: center 0%;
 
+}
+
+@mixin footer_top_spacing($top_margin, $top_padding, $height){
+    margin-top: $top_margin;
+    padding-top: $top_padding;
+    min-height: $height;
 }
 
 
@@ -218,25 +220,32 @@ nav.top-bar{
 
   ul.title-area {
 
-    margin-left: 105px;
+    // margin-left: 105px;
     height: 67px;
+    background-color: $dark_gray;
 
     li.name{
-      a {
 
+      @include border_image();
+
+      a {
         display: inline-block;
         position: relative;
-        margin-top: 15px;
+        padding-top: 15px;
+        height: 67px;
 
         div.logo_image{
-
-          @include image_sizing(85px, 50px, -5px, -95px);//(width, height, top, left)
-
+          @include image_sizing(85px, 50px, 10px, 10px);//(width, height, top, left)
+          background-color: $dark_gray;
         }
 
         h1{
 
           @include text_styling(18px, 3px, null, 400); //(font-size, letter-spacing, color, weight)
+          
+          &#flappy{
+            margin-left: 102px;
+          }
 
           &#app{
             color: #fff;
@@ -244,7 +253,41 @@ nav.top-bar{
         }// ends h1
       }//ends a
     }//ends li.name
+    li.menu-icon{
+      a{
+        span{
+          &:after{//this styles the hamburger menu icon
+            box-shadow: 0 0px 0 2px #03C5C5, 0 8px 0 2px #03C5C5, 0 16px 0 2px #03C5C5;
+            width: 23px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
   }//ends ul.title-area
+
+  section.top-bar-section{
+    
+    background-color: $dark_gray;
+
+    ul.right{
+
+      background-color: $light_blue;
+
+      li{
+        background-color: $dark_gray;
+        margin: 1px 0px;
+        
+        a{
+          @include text_styling(15px, 2px, #fff, 400, block); //(font-size, letter-spacing, color, weight, display)
+        
+          &.blue{
+            color: $light_blue;
+          }
+        }//ends a
+      }//ends li
+    }//ends ul.right
+  }//ends section.top-bar-section
 }// ends nav.top-bar
 
 
@@ -252,15 +295,11 @@ nav.top-bar{
 
 div#game_overview {
 
-  
   margin-top: 50px;
 
   @media #{$large-up}{
-      
     min-height: 271px;
-
   }  
-
 
   div.columns{
 
@@ -271,11 +310,7 @@ div#game_overview {
       position: relative;
       width: 100%;
       top: -50px;
-      
     }
-
-    // background-color: blue;
-
 
     div#banner_image{
 
@@ -307,24 +342,17 @@ div#game_overview {
         border: 4px solid black;
         margin-left: 3px;
       
-      }
-    }//div#banner_image
-
-  }
+      }//ends @media large-up
+    }//ends div#banner_image
+  }//ends div.columns
   
-
-
-
-
   div#features{
 
     @media #{$medium-down}{
       
       margin-left: -18px;
 
-
     }  
-
 
     @media #{$large-up}{
 
@@ -334,7 +362,6 @@ div#game_overview {
       //FIX right side is thinner by ~5 px
       
     }  
-
 
     ul {
 
@@ -347,7 +374,6 @@ div#game_overview {
       
       li.feature_list{
 
-        
         border-top: 1px solid $border_light_gray;
         background-color: $light_blue;
         
@@ -426,32 +452,23 @@ div#description {
   }//ends div.columns
 }//ends div#description
 
-
 //FOOTER AREA
-
-
 div#footer{
 
   background-color: $dark_gray;
   @include border_image();
 
+
   @media #{$small-only}{
-    margin-top: 15px;
-    padding-top: 29px;
-    min-height: 286px;
+    @include footer_top_spacing(15px, 29px, 286px);//(top margin, top padding, min height)
   }
   
   @media #{$medium-only}{
-    margin-top: 20px;
-    padding-top: 42px;
-    min-height: 292px;
+    @include footer_top_spacing(20px, 42px, 292px);//(top margin, top padding, min height)
   }
 
   @media #{$large-up}{
-    //FIX make mixin for these!!
-    margin-top: 20px;
-    padding-top: 55px;
-    min-height: 332px;
+    @include footer_top_spacing(20px, 55px, 332px);//(top margin, top padding, min height)
   }
 
   ul{
@@ -488,7 +505,6 @@ div#footer{
       }
     }//ends @media small-only
 
-
     @media #{$large-up}{
       @include text_styling(16px , 2px, null, 400);//(font-size, letter-spacing, color, weight, display)
       text-align: left;
@@ -505,7 +521,6 @@ div#footer{
         margin-left: -7px;
       }
     }//ends @media large-up
-   
 
     li{
 
@@ -520,9 +535,7 @@ div#footer{
       }//ends @media large-up
 
       a {
-
         &:hover{
-
           color:#fff;
         }//ends &:hover
       }//ends a
@@ -541,7 +554,6 @@ div#footer{
       }
     }//ends @media medium-down
     
-
     @media #{$medium-only}{
       margin-top: 17px;
     }//ends @media medium-only
