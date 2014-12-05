@@ -450,8 +450,11 @@ div#description {
       //jQuery ADDED ITEM STYLING
 
       span.bird{
-        
-        background-color: red;
+
+        &:first-child{
+          text-transform: capitalize;
+        }
+
         div.smallbird_pic {
 
           background-image: url('/images/logo.png');
@@ -462,10 +465,7 @@ div#description {
 
         }//ends div.smallbird_pic
       }//ends span.bird
-
       //END jQuery ADDED ITEM STYLING
-
-
     }//ends p
   }//ends div.columns
 }//ends div#description

@@ -5855,14 +5855,14 @@ div#description div.columns {
       text-transform: uppercase;
       text-transform: none;
       line-height: 33px; } }
-  div#description div.columns p span.bird {
-    background-color: red; }
-    div#description div.columns p span.bird div.smallbird_pic {
-      background-image: url('/images/logo.png');
-      background-size: cover;
-      display: inline-block;
-      width: 50px;
-      height: 32px; }
+  div#description div.columns p span.bird:first-child {
+    text-transform: capitalize; }
+  div#description div.columns p span.bird div.smallbird_pic {
+    background-image: url('/images/logo.png');
+    background-size: cover;
+    display: inline-block;
+    width: 50px;
+    height: 32px; }
 
 div#footer {
   background-color: #26282D;
