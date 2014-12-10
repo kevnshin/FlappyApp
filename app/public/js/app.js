@@ -77,9 +77,8 @@ $(function() {
   function add_column (listNum, columnNum) {
 
     var link = $("<a href='#'></a>");
-    link.html(footerLinkTitles[listNum]);
-    
     var list_item = $("<li>");
+    link.html(footerLinkTitles[listNum]);
     list_item.html(link);
 
     //first column
