@@ -1,6 +1,13 @@
 @import "partials/settings";
 @import "../public/bower_components/foundation/scss/foundation";
 
+// CLEAR FIX
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 //GENERAL STYLES
 $dark_gray: #26282D;
@@ -85,7 +92,7 @@ div#large_navbar{
   }
 
   @media #{$large-up}{
-    padding: 25px 0px 24px 0px;
+    padding: 24px 0px 36px 0px;
   }
 
   div.title{
@@ -149,65 +156,76 @@ div#large_navbar{
     text-align: right;
 
     @media #{$medium-only}{
-      margin-right: 3.5%;
+      margin-left: 55px;
     }
 
     @media #{$small-medium-only}{
-      margin-right: 1%;
+      margin-left: 15px;
     }
 
     @media #{$large-up}{
-      margin-right: -10px;
+      padding-left: 13.1%;
+      padding-right: 0px;
+      margin-right: -20px;
+      margin-top: 12px;
     }
 
-    li{
+    @media #{$medium-large-only}{
+      padding-left: 5px;
+    }
+
+    li.nav_link{
 
       display: inline-block;
-      letter-spacing: 2px;
-
-      &:hover{
-        border-color: #fff;
-
-        a.nav_link {
-          color: #fff;
-        }
-      }//ends &:hover
+      float: left;
 
       @media #{$medium-only}{
-        margin: 10px 2%;//10px;
+        margin: 10px 0px;
       }//ends @media medium-only
 
       @media #{$small-medium-only}{
-        margin: 10px 1%;
+        margin: 10px 0px;
       }
 
       @media #{$large-up}{
-
-        margin: 10px -3px;
-        padding: 10px 13px;
-        border-bottom: 5px solid $light_blue;
-
-        &.about_link {
-          padding-left: 0px;
-        }
-        
-        &.signup_link {
-          padding-right: 0px;
-        }
-
+        margin: 10px 0px;
       }//ends @media large-up
-
-      a {
       
+      a {
+
+        letter-spacing: 2px;
         text-transform: uppercase;
 
-        @media #{$medium-only}{ 
+        &:hover{
+          border-color: #fff;
+          color: #fff;
+        }//ends &:hover
+
+        @media #{$medium-only}{
+          margin: 0px 12px;
           font-size: 15px;
         }//ends @media medium-only
 
-        @media #{$large-up}{ 
+        @media #{$small-medium-only}{
+          margin: 0px 7px;
+        }
+
+        @media #{$large-up}{
+          // float: right;
+          margin: 0px;
+          padding: 15px 13px;
+          border-bottom: 5px solid $light_blue;
           font-weight: 700;
           font-size: 15px;
+
+          &#firstnav_link {
+            padding-left: 0px;
+          }
+          
+          &#lastnav_link {
+            padding-right: 0px;
+          }
+
         }//ends @media large-up
       }//ends a
     }//ends li.navlink
@@ -360,7 +378,11 @@ div#game_overview {
       margin-right: -68px;
       min-height: 271px;
       
-    }   
+    }
+
+    @media #{$medium-large-only}{
+      max-width: 300px;
+    }
 
     ul {
 
@@ -388,7 +410,8 @@ div#game_overview {
           @media #{$large-up}{
             padding: 14px 0px 15px 0px;
           }
-        }//ends $#featurelist)header
+
+        }
 
         a {
 
@@ -446,26 +469,6 @@ div#description {
         text-transform: none;
         line-height: 33px;
       }
-
-      //jQuery ADDED ITEM STYLING
-
-      span.bird{
-
-        &:first-child{
-          text-transform: capitalize;
-        }
-
-        div.smallbird_pic {
-
-          background-image: url('/images/logo.png');
-          background-size: cover;
-          display: inline-block;
-          width: 50px;
-          height: 32px;
-
-        }//ends div.smallbird_pic
-      }//ends span.bird
-      //END jQuery ADDED ITEM STYLING
     }//ends p
   }//ends div.columns
 }//ends div#description
@@ -549,6 +552,17 @@ div#footer{
       }
     }//ends @media large-up
 
+    @media #{$medium-large-only}{
+      margin-left: 30px;
+      &#commercial{
+        margin-left: -30px;
+      }
+
+      &#tutorials{
+        margin-left: 0px;
+      }
+    }//ends @media medium-large
+
     li{
 
       @media #{$large-up}{
@@ -612,6 +626,3 @@ div#footer{
     }//ends @media medium-large-only;
   }//ends div#copyright
 }//ends div#footer
-
-
-
